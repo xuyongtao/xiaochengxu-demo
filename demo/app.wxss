@@ -1,0 +1,19 @@
+@import "/common/btn.wxss";
+
+.fr {
+    float: right;
+}
+.hidden {
+    display: none;
+}
+.placeholder {
+    color: #9B9B9B;
+}
+
+.navigator-hover {
+    background-color: #ECECEC;    
+}
+
+page {
+    background-color: #f8f8f8; 
+}

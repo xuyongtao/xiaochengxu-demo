@@ -1,0 +1,87 @@
+<loading hidden="{{loading ? false : true}}">数据加载中...</loading>
+<view id="teacher-basic">
+    <image class="avatar" src="{{teacher.avatar}}"></image>
+    <view class="info">
+        <text class="name">{{teacher.name}}</text>
+        <text class="intro">{{teacher.intro}}</text>  
+    </view>
+</view>
+
+<view id="container">
+    <view class="tabs">
+        <block wx:for="{{panels}}" wx:for-item="panel">
+            <text 
+            style="width: {{(100-10*panels.length)/panels.length}}%" 
+            class="{{index === currentTab ? 'active' : ''}}" 
+            data-index="{{index}}"
+            bindtap="switchTab"
+            >{{panel.title}}</text>
+        </block>
+    </view>
+    <view class="panels">
+        <block wx:for="{{panels}}" wx:for-item="panel">
+            <view class="{{index === currentTab ? '' : 'hidden'}}">
+                <template wx:if="{{index === 0}}" is="teacherIntro" data="{{...panel.data}}"/>
+                <template wx:if="{{index === 1}}" is="teacherCourses" data="{{...panel.data}}"/>
+                <template wx:if="{{index === 2}}" is="teacherPhotos" data="{{...panel.data}}"/>    
+            </view>
+        </block>
+    </view>
+</view>
+
+<!--简介模板-->
+<template name="teacherIntro">
+    <view class="teacher-intro">
+        <view>
+            <text class="label">最高学历</text>
+            <text class="cont">{{degree}}</text>
+        </view>
+        <view>
+            <text class="label">毕业学校</text>
+            <text class="cont">{{school}}</text>
+        </view>
+        <view>
+            <text class="label">所属身份</text>
+            <text class="cont">{{role}}</text>
+        </view>
+        <view>
+            <text class="label">单位机构</text>
+            <text class="cont">{{studio}}</text>
+        </view>
+        <view>
+            <text class="label">个人介绍</text>
+            <text class="cont intro-cont">{{intro}}</text>
+        </view>
+    </view>
+    <view class="teaching-experience">
+        <view class="title">历史授课</view>
+        <block wx:for="{{experiences}}" wx:for-item="experience">
+            <view class="experience">
+                <text class="time">{{experience.time}}</text>
+                <text class="cont">{{experience.cont}}</text>
+            </view>    
+        </block>           
+    </view>
+</template>
+<!--课程模板-->
+<template name="teacherCourses">
+    <view class="teacher-courses">
+        <block wx:for="{{courses}}" wx:for-item="course">
+            <view class="course">
+                <image class="cover" src="{{course.cover}}"></image>
+                <view class="info">
+                    <text class="name">{{course.name}}</text>
+                    <text class="intro">{{course.intro}}</text>  
+                </view>
+            </view>
+        </block>
+    </view>
+</template>
+<!--相册模板-->
+<template name="teacherPhotos">
+    <view class="teacher-photos">
+        <block wx:for="{{photos}}" wx:for-item="photo">
+            <image src="{{photo}}"></image>
+        </block>
+    </view>
+</template>

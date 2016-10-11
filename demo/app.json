@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",    
+    "pages/personalCenter/personalCenter",
+    "pages/search/search",
+    "pages/fav/fav",        
+    "pages/teacher/teacher",
+    "pages/studio/studio",
+    "pages/404/404"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f5613e",
+    "navigationBarTitleText": "全民教育网",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f0f0f0"
+  },
+  "networkTimeout": {
+    "request": 5000
+  },
+  "tabBar": {
+    "color":"#5c5c5c",
+    "selectedColor":"#fb4747",
+    "backgroundColor":"#fefefe",
+    "borderStyle":"white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"images/icon-index.png",
+      "selectedIconPath":"images/icon-index-selected.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "科目",
+      "iconPath":"images/icon-course.png",
+      "selectedIconPath":"images/icon-course-selected.png"
+    }, {
+      "pagePath": "pages/personalCenter/personalCenter",
+      "text": "我的",
+      "iconPath":"images/icon-personal-center.png",
+      "selectedIconPath":"images/icon-personal-center-selected.png"
+    }]
+  }
+}

@@ -1,0 +1,27 @@
+<view id="user-basic">
+    <image class="avatar" src="{{user.avatar}}"></image>
+    <view class="info">
+        <text class="name">{{user.name}}</text>
+        <text class="intro">{{user.mobile}}</text>  
+    </view>
+</view>
+<view class="panel">
+    <navigator url="/pages/fav/fav" hover-class="navigator-hover" class="first">
+        <icon class="icon-fav"></icon>收藏的老师机构
+    </navigator>
+    <navigator url="/pages/viewed/viewed" hover-class="navigator-hover">
+        <icon class="icon-viewed"></icon>浏览过的老师机构
+    </navigator> 
+    <navigator url="/pages/contacted/contacted" hover-class="navigator-hover">
+        <icon class="icon-contacted"></icon>查看联系方式的老师机构
+    </navigator>    
+</view>
+<view class="panel">
+    <navigator url="/pages/changePsw/changePsw" hover-class="navigator-hover" class="first">
+        <icon class="icon-fav"></icon>修改密码
+    </navigator>    
+</view>
+<view class="btn btn-warn" catchtap="logout">注销登录</view>
+<modal confirm-text="确认" cancel-text="取消" hidden="{{tryLogout ? false : true}}" bindconfirm="confirmLogout" bindcancel="cancelLogout">
+    您确定要注销登录？
+</modal>

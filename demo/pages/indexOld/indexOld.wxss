@@ -1,0 +1,201 @@
+/*头部样式*/
+#header {
+    position: relative;
+}
+.logo-link {
+    position: absolute;
+    top: 30rpx;
+    left: 30rpx;
+}
+.banner {
+    width: 750rpx; 
+    height: 432rpx;
+    vertical-align: top;
+}
+.logo {
+    width: 187.5rpx;
+    height: 70rpx;
+    vertical-align: top;
+}
+
+/*搜索栏样式*/
+#search-bar {
+    position: absolute;
+    bottom: -40rpx; 
+    left: 50%;
+    height: 80rpx;
+    width: 90%;
+    margin-left: -45%;
+}
+#search-bar input {
+    padding: 0 30rpx;
+    background-color: #fff;
+    height: 100%;
+    border: 1px solid #efefef;
+    border-radius: 4px; 
+    font-size: 24rpx;  
+    vertical-align: top;   
+    box-shadow: 0 1px #f3f3f3; 
+}
+#search-bar icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 82rpx;
+    height: 82rpx;
+    background-color: #f5613e;
+    background-image: url('../../images/icon-search.png');
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; 
+}
+
+/*导航面板样式*/
+#navigation {
+    padding-top: 80rpx; 
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+.nav-item {
+    display: inline-block;
+    margin-bottom: 40rpx;
+    width: 20%;
+    text-align: center;
+}
+.nav-item icon {
+    width: 50rpx;
+    height: 50rpx;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.nav-item text {
+    display: block;
+    margin-top: 10rpx; 
+    font-size: 25rpx;
+}
+.nav-item .icon-art {
+    background-image: url('../../images/icon-art.png');
+}
+.nav-item .icon-sport {
+    background-image: url('../../images/icon-sport.png');
+}
+.nav-item .icon-life {
+    background-image: url('../../images/icon-life.png');
+}
+.nav-item .icon-abroad {
+    background-image: url('../../images/icon-abroad.png');
+}
+.nav-item .icon-child {
+    background-image: url('../../images/icon-child.png');
+}
+.nav-item .icon-middle-school {
+    background-image: url('../../images/icon-middle-school.png');
+}
+.nav-item .icon-hight-school {
+    background-image: url('../../images/icon-hight-school.png');
+}
+.nav-item .icon-college {
+    background-image: url('../../images/icon-college.png');
+}
+.nav-item .icon-language {
+    background-image: url('../../images/icon-language.png');
+}
+.nav-item .icon-other {
+    background-image: url('../../images/icon-other.png');
+}
+
+/*主要内容*/
+#container {
+    margin-top: 20rpx;
+}
+#container .teacher {
+    display: block;
+    padding: 30rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+#container .tabs {
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    color: #3a3a3a;
+} 
+#container .tabs text {
+    display: inline-block;
+    margin: 0 5%;
+    width: 40%;
+    text-align: center;
+}
+#container .tabs text.active {
+    border-bottom: 2px solid #f00;
+}
+
+/*列表老师信息样式*/
+#container .avatar {
+    float: left;
+    width: 160rpx;
+    height: 160rpx; 
+}
+#container .teacher-info {
+    height: 160rpx;    
+    margin-left: 190rpx; 
+}
+#container .teacher-name {
+    display: block;
+    padding: 5px 0;
+    color: #3a3a3a;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+#container .teacher-intro {
+    color: #a2a2a2;
+    font-size: 12px;
+}
+/*列表课程信息样式*/
+#container .course-info {
+    margin-top: 30rpx;
+    padding-top: 25rpx;
+    border-top: 1px solid #e0e0e0;
+    font-size: 35rpx;
+    color: #6e6e6e;
+}
+#container .course-type {
+    display: inline-block;
+    width: 200rpx;
+    line-height: 50rpx;
+    color: #fff;
+    background-color: #f5613e;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 2px;
+    vertical-align: top;
+}
+#container .course-price {
+    color: #f00;
+    font-weight: bold;
+}
+
+#btn-load-more {
+    margin-bottom: 20rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #fff;  
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0; 
+    font-size: 35rpx;
+    color: #6e6e6e;
+}
+
+#tip-last-page {
+    margin-bottom: 20rpx;
+    font-size: 24rpx;
+    color: #3a3a3a;
+    text-align: center;
+}

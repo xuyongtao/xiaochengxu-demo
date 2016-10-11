@@ -1,0 +1,17 @@
+.btn {
+    line-height: 88rpx;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0; 
+    font-size: 28rpx;
+}
+
+.btn-default {
+    background-color: #fff;  
+    color: #6e6e6e;
+}
+
+.btn-warn {
+    background-color: #f5613e;
+    color: #fff;
+}

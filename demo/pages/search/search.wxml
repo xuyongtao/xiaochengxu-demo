@@ -1,0 +1,14 @@
+<view class="search-bar">
+  <view class="form">
+    <view class="box">
+      <icon class="icon-search"></icon>
+      <input type="search" placeholder-class="placeholder" placeholder="搜索想学的技能" auto-focus focus="{{isFocus}}" bindinput="bindInputHandler" value="{{keyword}}"/>
+      <icon class="icon-clean" catchtap="cleanKeyword"></icon>
+    </view>
+    <view class="label {{isFocus ? 'hidden' : ''}}" catchtap="focusInput">
+      <icon class="icon-search"></icon>
+      <text>搜索想学的技能</text>
+    </view> 
+  </view>
+  <text class="btn-cancel {{isFocus ? '' : 'hidden'}}" catchtap="bindBlurHandler">取消</text>  
+</view>

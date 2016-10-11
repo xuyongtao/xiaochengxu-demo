@@ -1,0 +1,60 @@
+/*老师信息样式*/
+.teacher-list .teacher {
+    padding: 30rpx;
+    margin-top: 15rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+.teacher-list .avatar {
+    float: left;
+    width: 180rpx;
+    height: 180rpx; 
+}
+.teacher-list .info {
+    height: 180rpx;    
+    margin-left: 200rpx; 
+}
+.teacher-list .name {
+    padding: 20rpx 0;
+    color: #3a3a3a;
+    font-size: 34rpx;
+    font-weight: bold;
+}
+.teacher-list .name .icon {
+    float: right;
+    margin-top: -6rpx;
+    padding: 10rpx 20rpx; 
+    border: 1px solid #dc814a;
+    color: #dc814a;
+    font-size: 24rpx;
+    border-radius: 2px;
+}
+.teacher-list .intro {
+    height: 180rpx; 
+    color: #a2a2a2;
+    font-size: 24rpx;
+}
+
+/*加载更多样式*/
+.btn-loadmore {
+    margin: 20rpx 0;
+}
+.tip-lastpage {
+    width: 65%;
+    margin: auto;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 40rpx;  
+    line-height: 40rpx;
+    font-size: 28rpx;
+    text-align: center;
+}
+.tip-lastpage text {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    top: -25rpx;
+    padding: 0 12rpx;
+    background-color: #f0f0f0;
+    color: #999;
+}

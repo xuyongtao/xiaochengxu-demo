@@ -1,0 +1,17 @@
+<loading hidden="{{fetching ? false : true}}">请求数据中...</loading>
+<view class="teacher-list">
+    <block wx:for="{{teachers}}" wx:for-item="teacher">
+        <view class="teacher">
+            <image class="avatar" src="{{teacher.avatar}}"></image>
+            <view class="info">
+                <view class="name">
+                    <text>{{teacher.name}}</text>
+                    <text class="icon">{{teacher.teachingAge}}年教龄</text>
+                </view>
+                <text class="intro">{{teacher.intro}}</text>  
+            </view>
+        </view>
+    </block>
+</view>
+<view class="btn btn-default btn-loadmore {{isLastPage ? 'hidden' : ''}}" catchtap="loadMore">点击加载更多</view>
+<view class="tip-lastpage {{isLastPage ? '' : 'hidden'}}"><text>已是最后一页</text></view>

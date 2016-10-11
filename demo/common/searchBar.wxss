@@ -1,0 +1,120 @@
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.search-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 16rpx 20rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #EFEFF4;
+}
+.search-bar .btn-cancel {
+    margin-left: 10px;
+    line-height: 54rpx;
+    color: #09BB07;
+    white-space: nowrap;
+    font-size: 30rpx;
+}
+.search-bar .form {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    flex: auto;
+    background-color: #EFEFF4;
+}
+.search-bar .form::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    border-radius: 10px;
+    border: 1px solid #E6E6EA;
+    box-sizing: border-box;
+    background: #FFFFFF;
+}
+.search-bar .box {
+    position: relative;
+    padding-left: 60rpx;
+    padding-right: 60rpx;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.search-bar .label {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    z-index: 2;
+    text-align: center;
+    color: #9B9B9B;
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+.search-bar icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32rpx;
+    height: 32rpx;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.search-bar .icon-search {
+    background-image: url('/images/icon-search-grey.png');
+}
+.search-bar .icon-clean {
+    background-image: url('/images/icon-clean.png');
+}
+.search-bar .box .icon-search {
+    position: absolute;
+    left: 20rpx;
+    top: 50%;
+    margin-top: -16rpx;
+}
+.search-bar .box .icon-clean {
+    position: absolute;
+    top: 5rpx;
+    right: 5rpx;
+    padding: 10rpx;
+    background-size: 70%;
+}
+.search-bar .box input {
+    padding: 3rpx 0;
+    width: 100%;
+    height: 48rpx;
+    border: 0;
+    font-size: 28rpx;
+    line-height: 48rpx;
+    box-sizing: content-box;
+    background: transparent;
+}
+.search-bar .label icon {
+    vertical-align: top;
+    margin-right: 10rpx;
+    margin-top: 14rpx;
+}
+.search-bar .label text {
+    display: inline-block;
+    margin-top: 14rpx;
+    font-size: 28rpx;
+    vertical-align: top;
+    color: #9B9B9B;
+}

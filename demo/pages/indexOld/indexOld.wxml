@@ -1,0 +1,63 @@
+<loading hidden="{{fetching ? false : true}}">请求数据中...</loading>
+<!--头部-->
+<view id="header">
+  <image class="banner" src="../../images/banner.png"></image>
+  <navigator class="logo-link" url="/pages/index/index" redirect hover-class="none">
+    <image class="logo" src="../../images/logo.png"></image>
+  </navigator> 
+  <view id="search-bar">
+    <input placeholder="请输入想学的科目"/> 
+    <icon></icon> 
+  </view>       
+</view>
+
+<!--导航栏-->
+<view id="navigation">
+  <block wx:for="{{navItems}}">
+    <navigator class="nav-item" url="/pages/index/index" redirect hover-class="none">
+      <icon class="{{item.className}}" />
+      <text>{{item.text}}</text>
+    </navigator>
+  </block>  
+</view>
+
+<!--主要内容-->
+<view id="container">
+  <view class="tabs">
+    <block wx:for="{{panels}}" wx:for-item="panel">
+      <text 
+        style="width: {{(100-10*panels.length)/panels.length}}%" 
+        class="{{index === currentTab ? 'active' : ''}}" 
+        data-index="{{index}}"
+        bindtap="switchTab"
+      >{{panel.title}}</text>
+    </block>
+  </view>
+  <view class="panels">
+    <block wx:for="{{panels}}" wx:for-item="panel">
+      <view class="{{index === currentTab ? '' : 'hidden'}}">
+        <view wx:if="{{panel.teachers.length === 0}}" class="empty-cont">
+          <image src="{{emptyContImageUrl}}"></image>
+        </view>
+        <block wx:else wx:for="{{panel.teachers}}" wx:for-item="teacher">
+          <view class="teacher" data-id="{{teacher.id}}" data-role="{{teacher.role}}" catchtap="redictDetail">
+            <image class="avatar" src="{{teacher.avatar}}"></image>
+            <view class="teacher-info">
+              <text class="teacher-name">{{teacher.name}}</text>
+              <text class="teacher-intro">{{teacher.intro}}</text>  
+            </view>
+            <view class="course-info">
+              <text class="course-type">课程类型:{{teacher.courseType}}</text> 
+              <view class="fr">
+                {{teacher.courseName}}
+                <text class="course-price">￥{{teacher.coursePrice}}</text> 起/课时
+              </view> 
+            </view>
+          </view> 
+        </block>
+      </view>
+    </block>
+  </view>
+  <view id="btn-load-more" class="{{isLastPage ? 'hidden' : ''}}" catchtap="loadMore">点击加载更多</view>
+  <view id="tip-last-page" class="{{isLastPage ? '' : 'hidden'}}">已是最后一批老师</view>
+</view>

@@ -1,0 +1,45 @@
+<loading hidden="{{fetching ? false : true}}">请求数据中...</loading>
+
+<view class="search-bar">
+  <view class="form">
+    <view class="box">
+      <icon class="icon-search"></icon>
+      <!--<input type="search" placeholder-class="placeholder" placeholder="搜索想学的技能" focus="{{isFocus}}" bindinput="bindInputHandler" bindfocus="go2search" value="{{keyword}}"/>-->
+      <input type="search" placeholder-class="placeholder" placeholder="搜索想学的技能" focus="{{isFocus}}" value="{{keyword}}"/>
+      <icon class="icon-clean" catchtap="cleanKeyword"></icon>
+    </view>
+    <!--<view class="label {{isFocus ? 'hidden' : ''}}" catchtap="focusInput">-->
+    <view class="label {{isFocus ? 'hidden' : ''}}" bindtap="go2search">
+      <icon class="icon-search"></icon>
+      <text>搜索想学的技能</text>
+    </view> 
+  </view>
+  <text class="btn-cancel {{isFocus ? '' : 'hidden'}}" catchtap="bindBlurHandler">取消</text>  
+</view>
+
+<view class="teacher-list">
+  <block wx:for="{{teachers}}" wx:for-item="teacher">
+    <view class="panel teacher" data-id="{{teacher.id}}" data-role="{{teacher.role}}" catchtap="redictDetail">
+      <image class="avatar" src="{{teacher.avatar}}"></image>
+      <view class="info">
+        <view class="name">
+            <text>{{teacher.name}}</text>
+            <text class="icon">{{teacher.teachingAge}}年教龄</text>
+        </view>
+        <text class="intro">{{teacher.intro}}</text>  
+      </view>
+      <view class="course-info">
+        <text class="course-type">课程类型:{{teacher.courseType}}</text> 
+        <view class="fr">
+          {{teacher.courseName}}
+          <text class="course-price">￥{{teacher.coursePrice}}</text> 起/课时
+        </view> 
+      </view>
+    </view> 
+  </block>
+</view>
+
+<view class="btn btn-default btn-loadmore {{isLastPage ? 'hidden' : ''}}" catchtap="loadMore">点击加载更多</view>
+<view class="tip-lastpage {{isLastPage ? '' : 'hidden'}}">
+  <text>已是最后一页</text>
+</view>

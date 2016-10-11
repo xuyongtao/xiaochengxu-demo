@@ -1,0 +1,149 @@
+/*老师信息样式*/
+#teacher-basic {
+    display: block;
+    padding: 30rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+#teacher-basic .avatar {
+    float: left;
+    width: 160rpx;
+    height: 160rpx; 
+}
+#teacher-basic .info {
+    height: 160rpx;    
+    margin-left: 190rpx; 
+}
+#teacher-basic .name {
+    display: block;
+    padding: 5px 0;
+    color: #3a3a3a;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+#teacher-basic .intro {
+    height: 160rpx; 
+    color: #a2a2a2;
+    font-size: 12px;
+}
+
+/*选卡样式*/
+#container .tabs {
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #3a3a3a;
+} 
+#container .tabs text {
+    display: inline-block;
+    margin: 0 5%;
+    width: 40%;
+    text-align: center;
+}
+#container .tabs text.active {
+    border-bottom: 2px solid #f00;
+}
+
+#container .panels {
+    font-size: 30rpx;
+}
+
+/*简介面板样式*/
+#container .teacher-intro {
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+} 
+#container .teacher-intro view {
+    margin: 0 34rpx; 
+    margin-top: -1px;
+    line-height: 100rpx;
+    border-top: 1px solid #e0e0e0;
+}
+#container .teacher-intro .label {
+    float: left;
+    color: #9f9f9f; 
+}
+#container .teacher-intro .cont {
+    display: block;
+    margin-left: 180rpx; 
+}
+#container .teacher-intro .intro-cont {
+    padding: 20rpx 0;
+    line-height: 60rpx;
+}
+
+/*授课经历样式*/
+#container .teaching-experience {
+    margin-top: 20rpx;
+    padding-bottom: 20rpx;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;    
+}
+#container .teaching-experience .experience {
+    padding: 30rpx 40rpx 0 90rpx;
+    
+} 
+#container .teaching-experience .title {
+    padding: 0 30rpx 0 90rpx;
+    line-height: 100rpx;   
+    border-bottom: 1px solid #e0e0e0;      
+}
+#container .teaching-experience .cont {
+    display: block;
+    margin-top: 30rpx;
+    line-height: 60rpx;
+}
+
+/*老师课程面板样式*/
+#container .teacher-courses {
+    background-color: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+#container .teacher-courses .course {
+    padding: 30rpx;
+    margin-top: -1px;
+    border-top: 1px solid #e0e0e0;
+}
+#container .teacher-courses .cover {
+    float: left;
+    width: 200rpx;
+    height: 160rpx; 
+    background-color: #eee; 
+}
+#container .teacher-courses .info {
+    height: 160rpx;    
+    margin-left: 230rpx; 
+}
+#container .teacher-courses .name {
+    display: block;
+    padding: 10px 0;
+    color: #3a3a3a;
+    font-size: 35rpx;
+    font-weight: bold;
+}
+#container .teacher-courses .intro {
+    line-height: 40rpx; 
+    color: #a2a2a2;
+    font-size: 26rpx;
+}
+
+/*老师相册面板样式*/
+#container .teacher-photos {
+    background-color: #fff;  
+      
+}
+#container .teacher-photos image {
+    padding: 30rpx 5%;
+    width: 40%;
+    height: auto;
+}
+
+

@@ -1,0 +1,28 @@
+@import "/common/list.wxss";
+@import "/common/searchBar.wxss";
+
+.teacher-list {
+    margin-top: 90rpx;
+}
+.teacher-list .course-info {
+    margin-top: 30rpx;
+    padding-top: 25rpx;
+    border-top: 1px solid #e0e0e0;
+    font-size: 35rpx;
+    color: #6e6e6e;
+}
+.teacher-list .course-type {
+    display: inline-block;
+    width: 200rpx;
+    line-height: 50rpx;
+    color: #fff;
+    background-color: #f5613e;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 2px;
+    vertical-align: top;
+}
+.teacher-list .course-price {
+    color: #f00;
+    font-weight: bold;
+}
