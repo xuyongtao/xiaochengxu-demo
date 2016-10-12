@@ -125,6 +125,10 @@ Page({
     onLoad: function() {
         this.getTeachers();
     },
+    onReady: function() {
+        
+        
+    },
     data: {
         keyword: '',
         isFocus: false,

@@ -1,1 +1,30 @@
 @import "/common/searchBar.wxss";
+@import "/common/panel.wxss";
+
+scroll-view {
+    margin-top: 90rpx;
+}
+
+.history-panel .label,
+.cat-panel .label {
+    padding: 8rpx 30rpx;
+    font-size: 28rpx;
+    color: #999;     
+}
+
+#anchor-bar {
+    position: fixed;
+    z-index: 2;
+    right: 10rpx;
+    top: 50%;
+    margin-top: -352rpx;
+    font-size: 12px;
+    line-height: 64rpx;
+    text-align: center;
+}
+#anchor-bar .icon-search {
+    width: 24rpx;
+    height: 24rpx;
+    background: url('/images/icon-search-grey.png') no-repeat;
+    background-size: cover;
+}

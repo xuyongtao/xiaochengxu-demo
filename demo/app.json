@@ -1,8 +1,9 @@
 {
   "pages":[
+    "pages/search/search",
     "pages/index/index",    
     "pages/personalCenter/personalCenter",
-    "pages/search/search",
+    
     "pages/fav/fav",        
     "pages/teacher/teacher",
     "pages/studio/studio",
@@ -29,7 +30,7 @@
       "iconPath":"images/icon-index.png",
       "selectedIconPath":"images/icon-index-selected.png"
     }, {
-      "pagePath": "pages/logs/logs",
+      "pagePath": "pages/search/search",
       "text": "科目",
       "iconPath":"images/icon-course.png",
       "selectedIconPath":"images/icon-course-selected.png"

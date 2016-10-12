@@ -35,5 +35,36 @@ App({
     studioBasicUrl: '/pages/studio',
     defaultCourseCover: '/images/default-course-cover.png',
     emptyContImageUrl: '/images/empty-cont.png',
+    cats: [{
+      label: '艺术',
+      name: 'art' 
+    }, {
+      label: '体育',
+      name: 'sport'
+    }, {
+      label: '语言',
+      name: 'language'
+    }, {
+      label: '高中',
+      name: 'hight-school'
+    }, {
+      label: '初中',
+      name: 'middle-school'
+    }, {
+      label: '出国',
+      name: 'abroad'
+    }, {
+      label: '大学',
+      name: 'college'
+    }, {
+      label: '幼小',
+      name: 'child'
+    }, {
+      label: '生活',
+      name: 'life'
+    }, {
+      label: '其他',
+      name: 'other'
+    }]
   }
 })

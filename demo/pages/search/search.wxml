@@ -1,3 +1,10 @@
+<view id="anchor-bar">
+    <view bindtap="scrollTop"><icon class="icon-search"></icon></view>
+    <block wx:for="{{cats}}" wx:for-item="cat">
+      <view bindtap="scrollPanel" data-index="{{index}}">{{cat.label}}</view>
+    </block>
+</view>
+
 <view class="search-bar">
   <view class="form">
     <view class="box">
@@ -12,3 +19,31 @@
   </view>
   <text class="btn-cancel {{isFocus ? '' : 'hidden'}}" catchtap="bindBlurHandler">取消</text>  
 </view>
+
+<scroll-view scroll-into-view="{{toView}}" scroll-y="true" style="height: 1100rpx">
+    <view id="history-panel" class="history-panel">
+        <view class="label">最近搜索记录</view>
+        <view class="panel-m">
+            <block wx:for="{{histories}}" wx:for-item="history">
+                <navigator url="{{history.url}}" hover-class="navigator-hover" class="{{index === 0 ? 'first' : ''}}">
+                    <icon class="icon"></icon>{{history.label}}
+                </navigator>
+            </block>
+        </view>
+    </view>
+
+    <block wx:for="{{cats}}" wx:for-item="cat">
+        <view id="{{cat.name}}-panel" class="cat-panel">
+            <view class="label">{{cat.label}}</view>
+            <view class="panel-m">
+                <block wx:for="{{cat.courses}}" wx:for-item="course">
+                    <navigator url="{{course.url}}" hover-class="navigator-hover" class="{{index === 0 ? 'first' : ''}}">
+                        <icon class="icon-fav"></icon>{{course.label}}
+                    </navigator>    
+                </block>  
+            </view>
+        </view>    
+    </block>
+</scroll-view>
+
+

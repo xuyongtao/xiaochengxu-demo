@@ -9,6 +9,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .search-bar {
     position: fixed;
     top: 0;
+    z-index: 2;
     width: 100%;
     padding: 16rpx 20rpx;
     display: -webkit-box;
