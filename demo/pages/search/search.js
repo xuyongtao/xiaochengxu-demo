@@ -3,7 +3,16 @@ var cats = appInstance.globalData.cats;
 
 Page({
     onLoad: function() {
-        
+        var that = this;
+
+        wx.getSystemInfo({
+            success: function(res) {
+                that.setData({
+                    windowHeight: (res.windowHeight * 2 - 90)
+                })
+                console.log('系统信息：', res);
+            }
+        })
 
         var newCats = this.data.cats;
 

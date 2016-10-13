@@ -20,7 +20,7 @@
   <text class="btn-cancel {{isFocus ? '' : 'hidden'}}" catchtap="bindBlurHandler">取消</text>  
 </view>
 
-<scroll-view scroll-into-view="{{toView}}" scroll-y="true" style="height: 1100rpx">
+<scroll-view scroll-into-view="{{toView}}" scroll-y="true" style="height: {{windowHeight}}rpx">
     <view id="history-panel" class="history-panel">
         <view class="label">最近搜索记录</view>
         <view class="panel-m">

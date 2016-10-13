@@ -31,7 +31,7 @@
       "selectedIconPath":"images/icon-index-selected.png"
     }, {
       "pagePath": "pages/search/search",
-      "text": "科目",
+      "text": "搜索",
       "iconPath":"images/icon-course.png",
       "selectedIconPath":"images/icon-course-selected.png"
     }, {
