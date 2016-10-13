@@ -8,7 +8,7 @@ Page({
         wx.getSystemInfo({
             success: function(res) {
                 that.setData({
-                    windowHeight: (res.windowHeight * 2 - 90)
+                    windowHeight: (res.windowHeight * 2 - 90 - 110)
                 })
                 console.log('系统信息：', res);
             }
@@ -82,7 +82,7 @@ Page({
         toView: 'history-panel',
         cats,
         keyword: '',
-        isFocus: true,
+        isFocus: false,
         fetching: false,
         isLastPage: false,
         currentPage: 0,

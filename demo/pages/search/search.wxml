@@ -1,4 +1,4 @@
-<view id="anchor-bar">
+<view id="anchor-bar" hidden="{{isFocus}}">
     <view bindtap="scrollTop"><icon class="icon-search"></icon></view>
     <block wx:for="{{cats}}" wx:for-item="cat">
       <view bindtap="scrollPanel" data-index="{{index}}">{{cat.label}}</view>
@@ -12,38 +12,42 @@
       <input type="search" placeholder-class="placeholder" placeholder="搜索想学的技能" auto-focus focus="{{isFocus}}" bindinput="bindInputHandler" value="{{keyword}}"/>
       <icon class="icon-clean" catchtap="cleanKeyword"></icon>
     </view>
-    <view class="label {{isFocus ? 'hidden' : ''}}" catchtap="focusInput">
+    <view hidden="{{isFocus}}" class="label" catchtap="focusInput">
       <icon class="icon-search"></icon>
       <text>搜索想学的技能</text>
     </view> 
   </view>
-  <text class="btn-cancel {{isFocus ? '' : 'hidden'}}" catchtap="bindBlurHandler">取消</text>  
+  <text hidden="{{!isFocus}}" class="btn-cancel" catchtap="bindBlurHandler">取消</text>  
 </view>
 
-<scroll-view scroll-into-view="{{toView}}" scroll-y="true" style="height: {{windowHeight}}rpx">
-    <view id="history-panel" class="history-panel">
-        <view class="label">最近搜索记录</view>
-        <view class="panel-m">
-            <block wx:for="{{histories}}" wx:for-item="history">
-                <navigator url="{{history.url}}" hover-class="navigator-hover" class="{{index === 0 ? 'first' : ''}}">
-                    <icon class="icon"></icon>{{history.label}}
-                </navigator>
-            </block>
-        </view>
-    </view>
-
-    <block wx:for="{{cats}}" wx:for-item="cat">
-        <view id="{{cat.name}}-panel" class="cat-panel">
-            <view class="label">{{cat.label}}</view>
+<view hidden="{{isFocus}}">
+    <scroll-view scroll-into-view="{{toView}}" scroll-y="true" style="height: {{windowHeight}}rpx">
+        <view id="history-panel" class="history-panel">
+            <view class="label">最近搜索记录</view>
             <view class="panel-m">
-                <block wx:for="{{cat.courses}}" wx:for-item="course">
-                    <navigator url="{{course.url}}" hover-class="navigator-hover" class="{{index === 0 ? 'first' : ''}}">
-                        <icon class="icon-fav"></icon>{{course.label}}
-                    </navigator>    
-                </block>  
+                <block wx:for="{{histories}}" wx:for-item="history">
+                    <navigator url="{{history.url}}" hover-class="navigator-hover" class="{{index === 0 ? 'first' : ''}}">
+                        <icon class="icon"></icon>{{history.label}}
+                    </navigator>
+                </block>
             </view>
-        </view>    
-    </block>
-</scroll-view>
+        </view>
 
+        <block wx:for="{{cats}}" wx:for-item="cat">
+            <view id="{{cat.name}}-panel" class="cat-panel">
+                <view class="label">{{cat.label}}</view>
+                <view class="panel-m">
+                    <block wx:for="{{cat.courses}}" wx:for-item="course">
+                        <navigator url="{{course.url}}" hover-class="navigator-hover" class="{{index === 0 ? 'first' : ''}}">
+                            <icon class="icon-fav"></icon>{{course.label}}
+                        </navigator>    
+                    </block>  
+                </view>
+            </view>    
+        </block>
+    </scroll-view>
+</view>
 
+<view hidden="{{!keyword}}">
+    <block wx:for="{{}}"></block>    
+</view>
