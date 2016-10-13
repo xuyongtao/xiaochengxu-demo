@@ -8,22 +8,34 @@
 }
 .teacher-list .avatar {
     float: left;
-    width: 180rpx;
-    height: 180rpx; 
+    width: 176rpx;
+    height: 176rpx; 
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
 }
 .teacher-list .info {
     height: 180rpx;    
     margin-left: 200rpx; 
 }
+
+.teacher-list .name,
+.teacher-list .label-teaching-age,
+.teacher-list .label-certified {
+    display: inline-block;
+    vertical-align: top;
+}
 .teacher-list .name {
-    padding: 20rpx 0;
+    margin-top: 20rpx;
     color: #3a3a3a;
     font-size: 34rpx;
     font-weight: bold;
+    line-height: 40rpx;
 }
-.teacher-list .name .icon {
-    float: right;
-    margin-top: -6rpx;
+.teacher-list .label-teaching-age,
+.teacher-list .label-certified {
+    margin-top: 12rpx;
+    display: inline-block;
+    margin-left: 12rpx;
     padding: 10rpx 20rpx; 
     border: 1px solid #dc814a;
     color: #dc814a;
@@ -31,9 +43,10 @@
     border-radius: 2px;
 }
 .teacher-list .intro {
-    height: 180rpx; 
+    margin-top: 24rpx;
     color: #a2a2a2;
     font-size: 24rpx;
+    line-height: 24rpx;
 }
 
 /*加载更多样式*/

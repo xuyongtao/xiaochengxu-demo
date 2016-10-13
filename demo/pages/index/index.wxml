@@ -22,18 +22,22 @@
     <view class="panel teacher" data-id="{{teacher.id}}" data-role="{{teacher.role}}" catchtap="redictDetail">
       <image class="avatar" src="{{teacher.avatar}}"></image>
       <view class="info">
-        <view class="name">
-            <text>{{teacher.name}}</text>
-            <text class="icon">{{teacher.teachingAge}}年教龄</text>
-        </view>
-        <text class="intro">{{teacher.intro}}</text>  
+        <text class="name">{{teacher.name}}</text>
+        <text wx:if="{{teacher.studio}}" class="label-certified">机构认证</text>
+        <text wx:if="{{teacher.teachingAge}}" class="label-teaching-age">{{teacher.teachingAge}}年教龄</text>
+        <view class="intro">{{teacher.intro}}</view>  
       </view>
       <view class="course-info">
         <text class="course-type">课程类型:{{teacher.courseType}}</text> 
-        <view class="fr">
-          {{teacher.courseName}}
-          <text class="course-price">￥{{teacher.coursePrice}}</text> 起/课时
+        <view wx:if="{{teacher.coursePrice}}" class="course-other">
+          <text class="course-name">{{teacher.courseName}}</text>
+          <view class="course-price">
+            ￥<text>{{teacher.coursePrice}}</text>起/课时
+          </view> 
         </view> 
+        <view wx:else class="course-other-simple">
+          <text class="course-name">{{teacher.courseName}}</text>
+        </view>
       </view>
     </view> 
   </block>

@@ -8,7 +8,7 @@
     margin-top: 30rpx;
     padding-top: 25rpx;
     border-top: 1px solid #e0e0e0;
-    font-size: 35rpx;
+    font-size: 28rpx;
     color: #6e6e6e;
 }
 .teacher-list .course-type {
@@ -22,10 +22,33 @@
     border-radius: 2px;
     vertical-align: top;
 }
-.teacher-list .course-price {
+.teacher-list .course-price text {
     color: #f00;
     font-weight: bold;
 }
+.teacher-list .course-other,
+.teacher-list .course-other-simple {
+    float: right;
+    vertical-align: top;
+    margin-top: 12rpx;
+    width: 60%;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.teacher-list .course-other .course-name {
+    display: inline-block;
+    width: 55%;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.teacher-list .course-other .course-price {
+    display: inline-block;
+    width: 45%;  
+}
+
 
 .animation {
     margin-top: 60px;

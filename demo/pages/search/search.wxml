@@ -9,7 +9,7 @@
   <view class="form">
     <view class="box">
       <icon class="icon-search"></icon>
-      <input type="search" placeholder-class="placeholder" placeholder="搜索想学的技能" auto-focus focus="{{isFocus}}" bindinput="bindInputHandler" value="{{keyword}}"/>
+      <input type="search" placeholder-class="placeholder" placeholder="搜索想学的技能" auto-focus focus="{{isFocus}}" bindinput="bindInputHandler" bindblur="bindBlurHandler" value="{{keyword}}"/>
       <icon class="icon-clean" catchtap="cleanKeyword"></icon>
     </view>
     <view hidden="{{isFocus}}" class="label" catchtap="focusInput">
