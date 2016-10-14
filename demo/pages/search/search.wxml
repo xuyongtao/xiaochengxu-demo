@@ -17,7 +17,7 @@
       <text>搜索想学的技能</text>
     </view> 
   </view>
-  <text hidden="{{!isFocus}}" class="btn-cancel" catchtap="bindBlurHandler">取消</text>  
+  <text hidden="{{!isFocus}}" class="btn-cancel" catchtap="bindCancelHandler">取消</text>  
 </view>
 
 <view hidden="{{isFocus}}">
@@ -48,6 +48,18 @@
     </scroll-view>
 </view>
 
-<view hidden="{{!keyword}}">
-    <block wx:for="{{}}"></block>    
+<view hidden="{{!keyword}}" id="search-result">
+    <block wx:for="{{searchResult}}" wx:for-item="result">
+        <view class="search-result-panel">
+            <view class="label">{{result.label}}</view>
+            <view class="panel-m">
+                <block wx:for="{{result.panels}}" wx:for-item="panel">
+                    <navigator url="{{panel.url}}" hover-class="navigator-hover">
+                        <icon></icon>{{panel.label}}
+                    </navigator>    
+                </block>
+            </view>
+            <view class="more-panel">查看更多</view>
+        </view>
+    </block>    
 </view>

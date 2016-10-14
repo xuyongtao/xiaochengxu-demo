@@ -258,28 +258,3 @@ app.post('/get-fav-teachers', jsonParser, function(req, res) {
 	}
 })
 
-app.get('/get-cats', function(req, res) {
-	if (req.protocol === 'https') {
-		var sequelize = buildMysqlConnetion();
-		var queryCatsPromise = sequelize.query(`
-			select 
-				id,
-				label,
-				father_id as fatherId
-			from cats
-		`);
-
-		Promise
-			.resovle(queryCatsPromise)
-			.then(function(result) {
-				sequelize.close();
-				console.log('关闭数据库连接完成');
-
-				var data = result[0] || [];
-				var cats = [];
-				var catsObject = Lodash.keyBy('id');// 转为对象好处理
-
-			})
-	}		
-})
-

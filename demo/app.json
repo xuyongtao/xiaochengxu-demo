@@ -1,12 +1,13 @@
 {
   "pages":[
+    "pages/teacher/teacher",
     "pages/index/index",
     "pages/search/search",
         
     "pages/personalCenter/personalCenter",
     
     "pages/fav/fav",        
-    "pages/teacher/teacher",
+    
     "pages/studio/studio",
     "pages/404/404"
   ],

@@ -5,6 +5,12 @@ var defaultCourseCover = appInstance.globalData.defaultCourseCover;
 Page({
     onLoad: function() {
         var that = this;
+        var animation = wx.createAnimation({
+            duration: 800,
+            timingFunction: 'ease',
+        });
+
+        this.animation = animation
 
         setTimeout(function() {
             that.setData({
@@ -35,6 +41,27 @@ Page({
         }
 
     },
+    showDetail: function(){
+        this.setData({
+            showCourse: true
+        })
+
+        this.animation.bottom(0).step();
+
+        this.setData({
+            animationData: this.animation.export()
+        })
+    },
+    hideDetail: function(){
+        this.animation.bottom('-100%').step();
+
+        this.setData({
+            animationData: this.animation.export()
+        })
+        this.setData({
+            showCourse: false
+        })   
+    },
     data: {
         teacher: {
             "name": "yota",
@@ -44,6 +71,7 @@ Page({
         },
         currentTab: 0,
         loading: true,
+        showCourse: false,
         panels: [{
             title: tabTitle[0],
             data: {
@@ -64,6 +92,36 @@ Page({
             title: tabTitle[1],
             data: {
                 courses: [{
+                    cover: "" || defaultCourseCover,
+                    name: "天山健身",
+                    intro: "优美的环境，全方位的服务，是您健身休闲的好去处！价格150元起",
+                    type: "1对1"
+                }, {
+                    cover: "" || defaultCourseCover,
+                    name: "体适能训练",
+                    intro: "优美的环境，全方位的服务，是您健身休闲的好去处！价格150元起",
+                    type: "1对1"
+                }, {
+                    cover: "" || defaultCourseCover,
+                    name: "天山健身",
+                    intro: "优美的环境，全方位的服务，是您健身休闲的好去处！价格150元起",
+                    type: "1对1"
+                }, {
+                    cover: "" || defaultCourseCover,
+                    name: "体适能训练",
+                    intro: "优美的环境，全方位的服务，是您健身休闲的好去处！价格150元起",
+                    type: "1对1"
+                }, {
+                    cover: "" || defaultCourseCover,
+                    name: "天山健身",
+                    intro: "优美的环境，全方位的服务，是您健身休闲的好去处！价格150元起",
+                    type: "1对1"
+                }, {
+                    cover: "" || defaultCourseCover,
+                    name: "体适能训练",
+                    intro: "优美的环境，全方位的服务，是您健身休闲的好去处！价格150元起",
+                    type: "1对1"
+                }, {
                     cover: "" || defaultCourseCover,
                     name: "天山健身",
                     intro: "优美的环境，全方位的服务，是您健身休闲的好去处！价格150元起",

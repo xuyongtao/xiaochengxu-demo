@@ -43,16 +43,52 @@ Page({
     bindInputHandler: function(event) {
         var keyword = event.detail.value;
         this.setData({
-            keyword
+            keyword,
+            searchResult: [{
+                label: '科目',
+                panels: [{
+                    label: '初中-初三-物理'
+                }, {
+                    label: '高中-高一-物理'
+                }, {
+                    label: '高考物理'
+                }]
+            }, {
+                label: '机构',
+                panels: [{
+                    label: '机构1'
+                }, {
+                    label: '机构2'
+                }, {
+                    label: '机构3'
+                }]
+            }, {
+                label: '老师',
+                panels: [{
+                    label: '老师1'
+                }, {
+                    label: '老师2'
+                }, {
+                    label: '老师3'
+                }]
+            }]
         }) 
         console.log('正在输入...', keyword);
-
+         
     },
     bindBlurHandler: function() {
+        if (!this.data.keyword) {
+            this.setData({
+                isFocus: false
+            })  
+        }
+          
+        console.log('失去焦点');
+    },
+    bindCancelHandler: function(){
         this.setData({
             isFocus: false
-        })    
-        console.log('失去焦点');
+        })
     },
     cleanKeyword: function() {
         console.log('清除关键字');
@@ -82,6 +118,7 @@ Page({
         toView: 'history-panel',
         cats,
         keyword: '',
+        searchResult: [],
         isFocus: false,
         fetching: false,
         isLastPage: false,

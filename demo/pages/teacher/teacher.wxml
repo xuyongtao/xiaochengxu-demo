@@ -29,6 +29,16 @@
     </view>
 </view>
 
+<view hidden="{{!showCourse}}">
+    <view class="course-detail-panel-bg" bindtap="hideDetail"></view>
+    <view class="course-detail-panel">
+        <scroll-view id="" animation="{{animationData}}" scroll-y="true" style="height: 100%">
+        
+            课程详细信息
+        </scroll-view>
+    </view>
+</view>
+
 <!--简介模板-->
 <template name="teacherIntro">
     <view class="teacher-intro">
@@ -67,7 +77,7 @@
 <template name="teacherCourses">
     <view class="teacher-courses">
         <block wx:for="{{courses}}" wx:for-item="course">
-            <view class="course">
+            <view class="course" bindtap="showDetail">
                 <image class="cover" src="{{course.cover}}"></image>
                 <view class="info">
                     <text class="name">{{course.name}}</text>

@@ -1,15 +1,66 @@
 @import "/common/searchBar.wxss";
 @import "/common/panel.wxss";
 
-scroll-view {
+scroll-view,
+#search-result {
     margin-top: 90rpx;
 }
 
 .history-panel .label,
-.cat-panel .label {
+.cat-panel .label,
+.search-result-panel .label,
+.search-result-panel .more-panel {
     padding: 8rpx 30rpx;
     font-size: 28rpx;
     color: #999;     
+}
+.search-result-panel .label {
+    padding: 20rpx 30rpx 10rpx;
+    background-color: #fff;
+}
+.search-result-panel .more-panel {
+    position: relative;
+    padding: 30rpx;
+    background-color: #fff;
+}
+.search-result-panel .more-panel::after {
+    content: " ";
+    display: inline-block;
+    height: 12rpx;
+    width: 12rpx;
+    border-width: 2rpx 2rpx 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    top: -4rpx;
+    position: absolute;
+    top: 50%;
+    margin-top: -8rpx;
+    right: 30rpx;
+}
+.search-result-panel .more-panel::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 30rpx;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.search-result-panel {
+    margin-bottom: 20rpx;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+.search-result-panel .panel-m {
+    border: none;
 }
 
 #anchor-bar {
